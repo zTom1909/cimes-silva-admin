@@ -1,4 +1,4 @@
-import { BooleanInput, Filter, TextInput } from 'react-admin';
+import { BooleanInput, DateInput, Filter, TextInput } from 'react-admin';
 
 const UserFilter = (props) => (
     <Filter {...props}>
@@ -6,6 +6,7 @@ const UserFilter = (props) => (
         <TextInput label="Ubicacion" source="location" />
         <TextInput label="Telefono" source="phone" />
         <BooleanInput label="Es cliente?" source="customer" />
+        <DateInput label="Fecha" source="createdAt" />
     </Filter>
 );
 
