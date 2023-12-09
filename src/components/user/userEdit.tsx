@@ -1,4 +1,4 @@
-import { Edit, SimpleForm, TextInput } from "react-admin";
+import { BooleanInput, Edit, SimpleForm, TextInput } from "react-admin";
 
 const UserEdit = () => {
   return (
@@ -8,7 +8,7 @@ const UserEdit = () => {
         <TextInput source="location" />
         <TextInput source="phone" />
         <TextInput source="message" multiline rows={5} />
-        <TextInput source="createdAt" InputProps={{ disabled: true }} />
+        <BooleanInput source="customer" />
       </SimpleForm>
     </Edit>
   );
