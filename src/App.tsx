@@ -1,5 +1,6 @@
 
-import { Admin, Resource, ListGuesser, EditGuesser, ShowGuesser } from 'react-admin';
+import { Admin, Resource, ShowGuesser } from 'react-admin';
+import UserList from "./components/user/userList";
 import { dataProvider } from './dataProvider';
 import { authProvider } from './authProvider';
 
@@ -8,7 +9,7 @@ export const App = () => (
         dataProvider={dataProvider}
 		authProvider={authProvider}
 	>
-        <Resource name="admin" list={ListGuesser} edit={EditGuesser} show={ShowGuesser} />
+        <Resource name="user" list={UserList} show={ShowGuesser} />
     </Admin>
 );
 
