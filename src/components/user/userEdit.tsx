@@ -1,13 +1,14 @@
-import { BooleanInput, Edit, SimpleForm, TextInput } from "react-admin";
+import { BooleanInput, Edit, SimpleForm, TextInput, NumberInput } from "react-admin";
+import UserTitle from "./userTitle";
 
 const UserEdit = () => {
   return (
-    <Edit>
+    <Edit title={<UserTitle />} >
       <SimpleForm>
         <TextInput source="name" InputProps={{ disabled: true }} />
         <TextInput source="location" />
-        <TextInput source="phone" />
-        <TextInput source="message" multiline rows={5} />
+        <NumberInput source="phone" />
+        <TextInput source="message" multiline />
         <BooleanInput source="customer" />
       </SimpleForm>
     </Edit>

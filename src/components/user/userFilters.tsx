@@ -1,6 +1,6 @@
 import { BooleanInput, DateInput, Filter, TextInput } from 'react-admin';
 
-const UserFilter = (props) => (
+const UserFilter = (props: any) => (
     <Filter {...props}>
         <TextInput label="Nombre" source="name" />
         <TextInput label="Ubicacion" source="location" />
