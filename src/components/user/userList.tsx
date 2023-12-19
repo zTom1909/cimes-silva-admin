@@ -18,12 +18,12 @@ const UserList = (props: any) => {
         />
       ) : (
         <Datagrid rowClick="show">
-          <BooleanStarField source="customer" />
-          <TextField source="name" />
-          <TextField source="location" />
-          <TextField source="phone" />
-          <LimitedTextField source="message" />
-          <DateField source="createdAt" sx={{ color: 'text.disabled' }} />
+          <BooleanStarField source="customer" label="Es cliente" />
+          <TextField source="name" label="Nombre" />
+          <TextField source="location" label="Ubicación" />
+          <TextField source="phone" label="Teléfono" />
+          <LimitedTextField source="message" label="Mensaje" />
+          <DateField source="createdAt" label="Fecha" sx={{ color: 'text.disabled' }} />
         </Datagrid>
       )}
     </List>

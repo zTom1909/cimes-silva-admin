@@ -5,11 +5,11 @@ const UserEdit = () => {
   return (
     <Edit title={<UserTitle />} >
       <SimpleForm>
-        <TextInput source="name" InputProps={{ disabled: true }} />
-        <TextInput source="location" />
-        <NumberInput source="phone" />
-        <TextInput source="message" multiline />
-        <BooleanInput source="customer" />
+        <TextInput source="name" label="Nombre" InputProps={{ disabled: true }} />
+        <TextInput source="location" label="Ubicación" />
+        <NumberInput source="phone" label="Teléfono" />
+        <TextInput source="message" label="Mensaje" multiline />
+        <BooleanInput source="customer" label="Es cliente" />
       </SimpleForm>
     </Edit>
   );

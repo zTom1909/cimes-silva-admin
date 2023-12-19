@@ -6,11 +6,11 @@ const UserEdit = () => {
   return (
     <Show title={<UserTitle />} >
       <SimpleShowLayout>
-        <TextField source="name" />
-        <TextField source="location" />
-        <TextField source="phone" />
-        <TextField source="message" />
-        <BooleanStarField source="customer" />
+        <TextField source="name" label="Nombre" />
+        <TextField source="location" label="Ubicación" />
+        <TextField source="phone" label="Teléfono" />
+        <TextField source="message" label="Mensaje" />
+        <BooleanStarField source="customer" label="Es cliente" />
       </SimpleShowLayout>
     </Show>
   );
