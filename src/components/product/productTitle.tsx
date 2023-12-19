@@ -6,7 +6,7 @@ const ProductTitle = () => {
   const isSmall = useMediaQuery<Theme>((theme) => theme.breakpoints.down("sm"));
   return (
     <span style={{ fontSize: isSmall ? "16px" : "22px" }}>
-      Producto: {record ? record.username : ""}
+      {`Producto: ${record ? record.name : "No disponible"}`}
     </span>
   );
 };
