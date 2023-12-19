@@ -24,7 +24,7 @@ const ProductList = (props: any) => {
       ) : (
         <Datagrid rowClick="show">
           <TextField source="name" label="Nombre" />
-          <LimitedTextField source="image" label="Imagen" width="700" />
+          <LimitedTextField source="image" label="Imagen" width="600" />
           <DateField
             source="createdAt"
             label="Fecha de creación"
