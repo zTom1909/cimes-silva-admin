@@ -1,4 +1,10 @@
-import { BooleanInput, Edit, SelectInput, SimpleForm, TextInput } from "react-admin";
+import {
+  BooleanInput,
+  Edit,
+  SelectInput,
+  SimpleForm,
+  TextInput,
+} from "react-admin";
 import AdminTitle from "./adminTitle";
 
 const typeChoices = [
@@ -10,11 +16,7 @@ const AdminEdit = () => {
   return (
     <Edit title={<AdminTitle />}>
       <SimpleForm>
-        <TextInput
-          source="username"
-          label="Nombre de Usuario"
-          InputProps={{ disabled: true }}
-        />
+        <TextInput source="username" label="Nombre de Usuario" />
         <SelectInput
           source="type"
           label="Tipo de cuenta"

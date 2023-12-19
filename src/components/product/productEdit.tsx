@@ -5,11 +5,7 @@ const ProductEdit = () => {
   return (
     <Edit title={<ProductTitle />}>
       <SimpleForm>
-        <TextInput
-          source="name"
-          label="Nombre"
-          InputProps={{ disabled: true }}
-        />
+        <TextInput source="name" label="Nombre" />
         <TextInput source="image" label="Imagen" />
         <BooleanInput source="isDisabled" label="Deshabilitado" />
       </SimpleForm>
