@@ -17,8 +17,7 @@ const ProductList = (props: any) => {
     <List {...props} filters={<ProductFilter />} title="Productos">
       {isSmall ? (
         <SimpleList
-          primaryText={(user) => user.username}
-          secondaryText={(user) => user.type}
+          primaryText={(user) => user.name}
           linkType={() => "show"}
         />
       ) : (
