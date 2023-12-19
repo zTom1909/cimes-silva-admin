@@ -27,7 +27,7 @@ export const authProvider: AuthProvider = {
     return Promise.resolve();
   },
   checkError: (error) => {  
-    const status = error.status;
+    const status = error?.status;
     if (status >= 400) {
       localStorage.removeItem("user");
       return Promise.reject();
