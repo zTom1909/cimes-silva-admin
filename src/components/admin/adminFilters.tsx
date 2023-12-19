@@ -1,4 +1,4 @@
-import { SelectInput, DateInput, Filter, TextInput, BooleanInput } from "react-admin";
+import { SelectInput, Filter, TextInput, BooleanInput } from "react-admin";
 
 const typeChoices = [
   { id: "admin", name: "Administrador" },
@@ -8,8 +8,7 @@ const typeChoices = [
 const AdminFilter = (props: any) => (
   <Filter {...props}>
     <TextInput label="Nombre" source="username" />
-    <SelectInput source="type" label="Tipo de cuenta" choices={typeChoices} />
-    <DateInput label="Fecha" source="createdAt" />
+    <SelectInput label="Tipo de cuenta" source="type" choices={typeChoices} />
     <BooleanInput label="Deshabilitada" source="isDisabled" />
   </Filter>
 );

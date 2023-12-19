@@ -22,7 +22,7 @@ const UserList = (props: any) => {
           <TextField source="name" label="Nombre" />
           <TextField source="location" label="Ubicación" />
           <TextField source="phone" label="Teléfono" />
-          <LimitedTextField source="message" label="Mensaje" />
+          <LimitedTextField source="message" label="Mensaje" width="300" />
           <DateField source="createdAt" label="Fecha" sx={{ color: 'text.disabled' }} />
         </Datagrid>
       )}

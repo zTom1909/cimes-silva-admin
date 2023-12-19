@@ -1,7 +1,7 @@
 import { BooleanField, Show, SimpleShowLayout, TextField } from "react-admin";
 import AdminTitle from "./adminTitle";
 
-const AdminEdit = () => {
+const AdminShow = () => {
   return (
     <Show title={<AdminTitle />} >
       <SimpleShowLayout>
@@ -13,4 +13,4 @@ const AdminEdit = () => {
   );
 };
 
-export default AdminEdit;
+export default AdminShow;

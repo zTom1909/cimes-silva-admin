@@ -2,7 +2,7 @@ import { Show, SimpleShowLayout, TextField } from "react-admin";
 import UserTitle from "./userTitle";
 import BooleanStarField from "../other/booleanStarField/booleanStarField";
 
-const UserEdit = () => {
+const UserShow = () => {
   return (
     <Show title={<UserTitle />} >
       <SimpleShowLayout>
@@ -16,4 +16,4 @@ const UserEdit = () => {
   );
 };
 
-export default UserEdit;
+export default UserShow;

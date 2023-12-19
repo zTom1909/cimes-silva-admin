@@ -3,7 +3,7 @@ import { List, SimpleList, Datagrid, TextField, DateField, BooleanField } from "
 
 import AdminFilter from "./adminFilters";
 
-const UserList = (props: any) => {
+const AdminList = (props: any) => {
   const isSmall = useMediaQuery < Theme > ((theme) => theme.breakpoints.down("sm"));
   return (
     <List {...props} filters={<AdminFilter />} title="Administradores">
@@ -25,4 +25,4 @@ const UserList = (props: any) => {
   );
 };
 
-export default UserList;
+export default AdminList;
