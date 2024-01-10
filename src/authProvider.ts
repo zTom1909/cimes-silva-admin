@@ -10,10 +10,11 @@ export const authProvider: AuthProvider = {
         username,
         password,
       });
-      const { success, message, admin } = data;
+      const { success, message, admin, token } = data;
 
       if (!success) throw new Error(message);
 
+      localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(admin));
       return Promise.resolve();
     } catch (error: any) {
@@ -23,19 +24,21 @@ export const authProvider: AuthProvider = {
     }
   },
   logout: () => {
+    localStorage.removeItem("token");
     localStorage.removeItem("user");
     return Promise.resolve();
   },
-  checkError: (error) => {  
+  checkError: (error) => {
     const status = error?.status;
     if (status >= 400) {
+      localStorage.removeItem("token");
       localStorage.removeItem("user");
       return Promise.reject();
     }
     return Promise.resolve();
   },
   checkAuth: () =>
-    localStorage.getItem("user") ? Promise.resolve() : Promise.reject(),
+    localStorage.getItem("token") ? Promise.resolve() : Promise.reject(),
   getPermissions: () => {
     const adminData = localStorage.getItem("user");
     if (adminData) {
