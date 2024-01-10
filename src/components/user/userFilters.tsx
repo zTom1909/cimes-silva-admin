@@ -6,6 +6,7 @@ const UserFilter = (props: any) => (
         <TextInput label="Ubicación" source="location" />
         <TextInput label="Teléfono" source="phone" />
         <BooleanInput label="Es cliente" source="customer" />
+        <BooleanInput label="Deshabilitado" source="isDisabled" />
         <DateInput label="Fecha" source="createdAt" />
     </Filter>
 );
